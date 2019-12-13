@@ -1,0 +1,178 @@
+<!-- THIS PAGE WAS DOWNLOAD BY SP DOWNLOADER -->
+  <!-- hongkha336@gmail.com -->
+<!DOCTYPE html>
+<html lang="">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>MUA LINK BM</title>
+		<link rel="stylesheet" type="text/css" href="tpl/bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="tpl/pro.css">
+	    <link rel="stylesheet" href="tpl/palette-gradient.min.css">
+		<link rel="stylesheet" type="text/css" href="tpl/css.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha256-NuCn4IvuZXdBaFKJOAcsU2Q3ZpwbdFisd5dux4jkQ5w=" crossorigin="anonymous" />
+	</head>
+	<body>
+		<nav class="navbar navbar-default">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="#">SELL-BM</a>
+				</div>
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav">
+						<li class="active"><a href="?act">Dashboard <span class="sr-only">(current)</span></a></li>
+						
+											</ul>
+									</div>
+			</div>
+		</nav><div class="container">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="alert alert-success">
+			     <strong><marquee>HỆ THỐNG BÁN LINK BM FACEBOOK</marquee></strong>   
+			</div>
+		</div>
+		<div class="col-lg-6">
+			<div class="panel panel-primary">
+				<div class="panel-heading">
+					<h3 class="panel-title"><i class="fa fa-clone"></i> Đăng Nhập & Đăng Kí </h3>
+				</div>
+				<div class="panel-body">
+					<div class="card-body p-6">
+							<div class="form-group">
+								<center><label class="form-label">Tài Khoản</label></center>
+								<input type="text" class="form-control" id="user" placeholder="Nhập vào tài khoản">
+							</div>
+							<div class="form-group">
+								<center><label class="form-label">Mật Khẩu</label>
+									<input type="password" class="form-control" id="password" placeholder="Nhập vào mật khẩu">
+								</center>
+							</div>
+							<div class="form-footer">
+								<center><button id="signin" class="btn btn-glow btn-bg-gradient-x-blue-green" style="color:#ffffff;" onclick="login();"><b><i class="fa fa-sign-in" aria-hidden="true"></i> Đăng Nhập & Đăng Ký</b></button></center>
+							</div>
+						</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-6">
+			<div class="panel panel-primary">
+				<div class="panel-heading">
+					<h3 class="panel-title"><i class="fa fa-cubes" aria-hidden="true"></i> Thông Kê Hệ Thống</h3>
+				</div>
+				<div class="panel-body">
+										<ul class="list-group">
+						<li class="list-group-item">
+							<span class="badge">5,000 VNĐ</span>
+							Giá BM 50$
+						</li>
+						<li class="list-group-item">
+							<span class="badge" id="price">35,000 VNĐ</span>
+							Giá BM 350$
+						</li>
+						<li class="list-group-item">
+							<span class="badge">400,000 VNĐ</span>
+							Giá BM Xác Minh:
+						</li>
+						<li class="list-group-item">
+							<span class="badge">200,000 VNĐ</span>
+							Giá BM 5:
+						</li>
+						<li class="list-group-item">
+							<span class="badge">200,000 VNĐ</span>
+							Giá BM 5 VIỆT:
+						</li>
+						<li class="list-group-item">
+							<span class="badge">200,000 VNĐ</span>
+							Giá BM 5 NGOẠI:
+						</li>
+						<li class="list-group-item">
+							<span class="badge">457</span>
+							BM 50$ Hiện Có:
+						</li>
+						<li class="list-group-item">
+							<span class="badge">42</span>
+							BM 350$ Hiện Có:
+						</li>
+						<li class="list-group-item">
+							<span class="badge">0</span>
+							BM Xác Minh Hiện Có:
+						</li>
+						<li class="list-group-item">
+							<span class="badge">0</span>
+							BM 5 Hiện Có:
+						</li>
+						<li class="list-group-item">
+							<span class="badge">0</span>
+							BM 5 Việt Hiện Có:
+						</li>
+						<li class="list-group-item">
+							<span class="badge">221</span>
+							BM 5 Ngoại Hiện Có:
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+	function login(){
+		var user = $("#user").val().trim();
+		var password = $("#password").val().trim();
+		$("#signin").html('<i class="fa fa-spinner fa-pulse"></i> Đang Đăng Nhập, Vui Lòng Đợi...');
+		$.ajax({
+			url: "modun/api.php",
+			type: "post",
+			dataType: "JSON",
+			data: {
+				user: user,
+				password: password,
+				type: "signin",
+			},
+			success: (data => {
+				$("#signin").html('<i class="fa fa-sign-in" aria-hidden="true"></i> Đăng Nhập & Đăng Ký');
+				setTimeout( e => {
+					location.reload();
+				}, 1500)
+				$.toast({
+				    heading: 'Message!',
+				    text: data.msg,
+				    showHideTransition: 'plain',
+				    icon: data.error
+				});
+			})
+		})
+	}
+</script><!-- jQuery -->
+		<script src="//code.jquery.com/jquery.js"></script>
+		<!-- Bootstrap JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+		<script src="tpl/js.js"></script>
+		<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+		<script type="text/javascript">
+			$(document).ready(function() {
+
+			})
+
+			function addCommas(nStr){
+			    nStr += '';
+			    x = nStr.split('.');
+			    x1 = x[0];
+			    x2 = x.length > 1 ? '.' + x[1] : '';
+			    var rgx = /(\d+)(\d{3})/;
+			    while (rgx.test(x1)) {
+			        x1 = x1.replace(rgx, '$1' + ',' + '$2');
+			    }
+			    return x1 + x2;
+			}
+		</script>
+	</body>
+</html>
